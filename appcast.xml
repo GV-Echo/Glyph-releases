@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+    <channel>
+        <title>Glyph</title>
+        <item>
+            <title>Glyph 1.27.1</title>
+            <pubDate>Thu, 22 Oct 2026 18:38:37 +0000</pubDate>
+            <sparkle:version>2026102203</sparkle:version>
+            <sparkle:shortVersionString>1.27.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="plain-text"><![CDATA[
+
+]]></description>
+            <enclosure url="https://github.com/GV-Echo/Glyph-releases/releases/download/v1.27.1/Glyph-1.27.1.aar" length="16541311" type="application/octet-stream" sparkle:edSignature="BQyTDEUr4Hfc4YyY4rzZUUkuegQA7d0HP34zB01w6PJ+/aZ6sK+jHdYS5Qqu9+UEwgmMjdw/bsAY9vxXnFNtBA=="/>
+        </item>
+    </channel>
+</rss>
