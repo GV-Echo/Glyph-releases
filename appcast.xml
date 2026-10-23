@@ -3,6 +3,22 @@
     <channel>
         <title>Glyph</title>
         <item>
+            <title>Glyph 1.28</title>
+            <pubDate>Fri, 23 Oct 2026 11:59:56 +0000</pubDate>
+            <sparkle:version>2026102301</sparkle:version>
+            <sparkle:shortVersionString>1.28</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="plain-text"><![CDATA[
+[en]
+- Clipboard: entries can now be copied by pressing their number (0 for the tenth)
+- Fixed a visual glitch in "Personalization"
+[ru]
+- Буфер: теперь можно копировать записи по нажатию соответствующей цифры (для десяти это 0)
+- Исправлен визуальный баг в пункте «Персонализация»
+]]></description>
+            <enclosure url="https://github.com/GV-Echo/Glyph-releases/releases/download/v1.28/Glyph-1.28.aar" length="16544029" type="application/octet-stream" sparkle:edSignature="TI6g3DDw2Mz5PEJ2ktquAecqTaR+4X9Qd1i+JK1tYJeCpv1aa9rWkp5V3EzvMPEpsO2wiIFy2pxabhDrpbZHAA=="/>
+        </item>
+        <item>
             <title>Glyph 1.27.1</title>
             <pubDate>Thu, 22 Oct 2026 18:38:37 +0000</pubDate>
             <sparkle:version>2026102203</sparkle:version>
