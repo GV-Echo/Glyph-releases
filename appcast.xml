@@ -3,6 +3,24 @@
     <channel>
         <title>Glyph</title>
         <item>
+            <title>Glyph 1.29</title>
+            <pubDate>Sat, 24 Oct 2026 11:48:54 +0000</pubDate>
+            <sparkle:version>2026102401</sparkle:version>
+            <sparkle:shortVersionString>1.29</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="plain-text"><![CDATA[
+[en]
+- Improved auto-completion: suggestions are now more accurate and frequent
+- Smart ranking: press Esc to lower priority for unwanted words
+- Improved vocabulary management and word tracking
+[ru]
+- Улучшено автодополнение: подсказки точнее и появляются чаще
+- Система рейтинга: нажмите Esc, чтобы слово предлагалось реже
+- Улучшена работа с запоминаемыми словами
+]]></description>
+            <enclosure url="https://github.com/GV-Echo/Glyph-releases/releases/download/v1.29/Glyph-1.29.aar" length="29854182" type="application/octet-stream" sparkle:edSignature="1ZIIiDNb+e0O+6WQms29ds0vMujxA45udMB96bBOEwNRTxsvAbZzUUOn9qDo3Kpwn9KhIM/KWm+DeK4aYXfDDw=="/>
+        </item>
+        <item>
             <title>Glyph 1.28</title>
             <pubDate>Fri, 23 Oct 2026 11:59:56 +0000</pubDate>
             <sparkle:version>2026102301</sparkle:version>
