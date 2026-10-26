@@ -3,6 +3,20 @@
     <channel>
         <title>Glyph</title>
         <item>
+            <title>Glyph 1.29.1</title>
+            <pubDate>Mon, 26 Oct 2026 14:21:14 +0000</pubDate>
+            <sparkle:version>2026102601</sparkle:version>
+            <sparkle:shortVersionString>1.29.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="plain-text"><![CDATA[
+[en]
+- Personalization: the "Forget" menu has a new "Words…" item to find learned words and remove the ones you tick, such as typos
+[ru]
+- Персонализация: в меню «Забыть» появился пункт «Слова…»: можно найти выученные слова и удалить отмеченные, например опечатки
+]]></description>
+            <enclosure url="https://github.com/GV-Echo/Glyph-releases/releases/download/v1.29.1/Glyph-1.29.1.aar" length="29994249" type="application/octet-stream" sparkle:edSignature="pmfGRuQdOADcJ2h1CqpTHRVI6B44LJhYBU5rRzN4N6bHL78V33VbfTyBWj4GlYPe3O8pXXZ03ORn83IPEGAVAw=="/>
+        </item>
+        <item>
             <title>Glyph 1.29</title>
             <pubDate>Sat, 24 Oct 2026 11:48:54 +0000</pubDate>
             <sparkle:version>2026102401</sparkle:version>
