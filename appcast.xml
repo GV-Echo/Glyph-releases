@@ -3,6 +3,20 @@
     <channel>
         <title>Glyph</title>
         <item>
+            <title>Glyph 1.29.3</title>
+            <pubDate>Thu, 29 Oct 2026 08:55:13 +0000</pubDate>
+            <sparkle:version>2026102902</sparkle:version>
+            <sparkle:shortVersionString>1.29.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="plain-text"><![CDATA[
+[en]
+- Glyph's windows (the update offer, About) now open above other apps instead of behind them
+[ru]
+- Окна Глифа (предложение обновиться, «О программе») теперь открываются поверх других приложений, а не позади них
+]]></description>
+            <enclosure url="https://github.com/GV-Echo/Glyph-releases/releases/download/v1.29.3/Glyph-1.29.3.aar" length="29967778" type="application/octet-stream" sparkle:edSignature="YkePUhTPGmavdmjAZwbOcA6m7KO3fCFAkb8QF+IpNuekNiYQojbG2totbut6kRqtfqKS/QwlAR4x2de+sp+uCw=="/>
+        </item>
+        <item>
             <title>Glyph 1.29.2</title>
             <pubDate>Thu, 29 Oct 2026 08:36:35 +0000</pubDate>
             <sparkle:version>2026102901</sparkle:version>
