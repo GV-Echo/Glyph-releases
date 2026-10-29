@@ -3,6 +3,20 @@
     <channel>
         <title>Glyph</title>
         <item>
+            <title>Glyph 1.29.2</title>
+            <pubDate>Thu, 29 Oct 2026 08:36:35 +0000</pubDate>
+            <sparkle:version>2026102901</sparkle:version>
+            <sparkle:shortVersionString>1.29.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="plain-text"><![CDATA[
+[en]
+- About: clicking the version number checks for updates right away
+[ru]
+- О программе: нажатие на номер версии сразу проверяет наличие обновлений
+]]></description>
+            <enclosure url="https://github.com/GV-Echo/Glyph-releases/releases/download/v1.29.2/Glyph-1.29.2.aar" length="29967630" type="application/octet-stream" sparkle:edSignature="A/Qza25kVSsATCK4DCsepKy/Za4HTzG1rCCuzY05lhBoFRLCULbUnWbVwEnmAQB2iCEloVHVdRDQ94Bd3/8pCg=="/>
+        </item>
+        <item>
             <title>Glyph 1.29.1</title>
             <pubDate>Mon, 26 Oct 2026 14:21:14 +0000</pubDate>
             <sparkle:version>2026102601</sparkle:version>
