@@ -3,6 +3,24 @@
     <channel>
         <title>Glyph</title>
         <item>
+            <title>Glyph 1.30.1</title>
+            <pubDate>Thu, 29 Oct 2026 15:39:03 +0000</pubDate>
+            <sparkle:version>2026102906</sparkle:version>
+            <sparkle:shortVersionString>1.30.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="plain-text"><![CDATA[
+[en]
+- Better support for more apps
+- Autocomplete exclusions: pick an app from the ones running
+- Fixed how the download speed is shown
+[ru]
+- Улучшена поддержка разных приложений
+- Исключения автодополнения: приложение можно выбрать из запущенных
+- Исправлено отображение скорости загрузки
+]]></description>
+            <enclosure url="https://github.com/GV-Echo/Glyph-releases/releases/download/v1.30.1/Glyph-1.30.1.aar" length="29960367" type="application/octet-stream" sparkle:edSignature="P16MXlTU04HqsBABEhJ7l/fCdjSoSKAlMHNezxb7ch5qx4Jplp4P8p5aU0LDSqaWxM3ESMn5LY4lXdblvws+Dg=="/>
+        </item>
+        <item>
             <title>Glyph 1.29.4</title>
             <pubDate>Thu, 29 Oct 2026 13:32:53 +0000</pubDate>
             <sparkle:version>2026102903</sparkle:version>
