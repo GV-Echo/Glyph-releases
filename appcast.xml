@@ -3,6 +3,30 @@
     <channel>
         <title>Glyph</title>
         <item>
+            <title>Glyph 1.31.0</title>
+            <pubDate>Sat, 31 Oct 2026 16:36:58 +0000</pubDate>
+            <sparkle:version>2026103101</sparkle:version>
+            <sparkle:shortVersionString>1.31.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="plain-text"><![CDATA[
+[en]
+A fresh new design: cleaner, clearer and easier to use
+Glyph is gentler on your battery
+Typing suggestions are faster and more reliable
+Improved protection for your data
+Fixed translations in a few places
+Small bugs fixed
+[ru]
+Новый дизайн: всё стало аккуратнее, понятнее и удобнее
+Glyph бережнее расходует батарею
+Подсказки при наборе стали быстрее и надёжнее
+Улучшена защита ваших данных
+Исправлен перевод в некоторых местах
+Исправлены мелкие ошибки
+]]></description>
+            <enclosure url="https://github.com/GV-Echo/Glyph-releases/releases/download/v1.31.0/Glyph-1.31.0.aar" length="30176899" type="application/octet-stream" sparkle:edSignature="o5e2+7ei8wgevlRxTAbBUxVRVG1dOI1r9U4EnWMPnrFp4sGZk/oqZVlP7c+c+acIK8nxNJOSD4sJCk5RVkDDCw=="/>
+        </item>
+        <item>
             <title>Glyph 1.30.1</title>
             <pubDate>Thu, 29 Oct 2026 15:39:03 +0000</pubDate>
             <sparkle:version>2026102906</sparkle:version>
