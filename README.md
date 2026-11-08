@@ -6,175 +6,237 @@
 
 ## Русский
 
-**Glyph** — лёгкая утилита для строки меню macOS: ресурсы Mac, история буфера обмена,
-локальное автодополнение текста в других приложениях, голосовой ввод и системный виджет.
+Glyph – небольшая утилита в строке меню macOS. Показывает загрузку Mac, помнит последние
+скопированные элементы, подсказывает слова при наборе и переводит голос в текст. Всё
+работает на самом Mac: текст и голос никуда не отправляются.
 
-### Скачать
+<p align="center">
+  <img src="screenshots/ru/resources.png" width="260" align="top" alt="Ресурсы">
+  <img src="screenshots/ru/settings.png" width="260" align="top" alt="Настройки">
+  <img src="screenshots/ru/tools-transcription.png" width="260" align="top" alt="Утилиты: транскрибация">
+</p>
 
-Последняя версия — на странице [Releases](https://github.com/GV-Echo/Glyph-releases/releases/latest),
-файл `Glyph-<версия>.dmg`. Нужна macOS 14 Sonoma или новее.
+### Что умеет
 
-Файл `.aar` рядом нужен для автообновления, скачивать его вручную не надо.
+#### Ресурсы
+
+CPU, GPU, память, диск, сеть, батарея и температуры датчиков. В строке меню можно
+оставить иконку или выводить температуру CPU либо загрузку CPU и RAM.
+
+#### Буфер обмена
+
+Последние 10 скопированных элементов: текст, ссылки, файлы, картинки до 30 МБ. История
+хранится только в памяти и открывается из любого приложения по `Ctrl+Opt+V`.
+
+<p align="center">
+  <img src="screenshots/ru/clipboard.png" width="360" alt="Буфер обмена">
+</p>
+
+#### Автодополнение
+
+Glyph дописывает слово серым прямо в поле ввода любого приложения, `Tab` вставляет
+подсказку. Словарь для русского и английского есть с первого запуска, со временем он
+подстраивается под ваш текст. На Mac с Apple silicon можно включить умные подсказки:
+их добавляет небольшая языковая модель (модуль 347 МБ).
+
+<p align="center">
+  <img src="screenshots/ru/suggestion.png" width="420" alt="Подсказка в тексте">
+</p>
+<p align="center">
+  <img src="screenshots/ru/tools-autocomplete.png" width="260" alt="Утилиты: автодополнение">
+</p>
+
+#### Голосовой ввод
+
+Нажмите `Ctrl+Opt+D`, говорите, нажмите ещё раз, и текст со знаками препинания
+появится в поле. Аудиофайл можно перевести в .txt. Для этого нужен модуль распознавания
+речи (575 МБ), он скачивается один раз во вкладке «Утилиты».
+
+<p align="center">
+  <img src="screenshots/ru/voice-input.png" width="380" alt="Голосовой ввод">
+</p>
+
+#### Текст с экрана
+
+`Ctrl+Opt+T`, выделите область, и текст с неё окажется в буфере обмена.
+
+#### Виджет
+
+CPU, память, сеть и батарея на рабочем столе или в Центре уведомлений.
+
+<p align="center">
+  <img src="screenshots/ru/widget.png" width="330" alt="Виджет">
+</p>
 
 ### Установка
 
-1. Откройте dmg и перетащите Glyph в папку «Программы».
-2. Glyph не нотаризован Apple, поэтому после скачивания macOS не даст его открыть.
-   Разрешите запуск одной командой в Терминале:
+Нужна macOS 14 Sonoma или новее.
+
+1. Скачайте `Glyph-<версия>.dmg` со страницы
+   [Releases](https://github.com/GV-Echo/Glyph-releases/releases/latest), откройте его и
+   перетащите Glyph в «Программы».
+2. Glyph не нотаризован Apple, и при первом запуске macOS его заблокирует. Разрешите
+   запуск в Терминале:
 
    ```bash
    xattr -dr com.apple.quarantine /Applications/Glyph.app && open /Applications/Glyph.app
    ```
 
-   Или: Системные настройки → Конфиденциальность и безопасность → «Открыть всё равно».
-3. Glyph живёт в строке меню, значка в Dock у него нет.
-4. Для автодополнения нужен доступ: Системные настройки → Конфиденциальность и
-   безопасность → Универсальный доступ.
+   Или через Системные настройки → Конфиденциальность и безопасность → «Открыть всё равно».
+3. Значок появится в строке меню, в Dock его нет. Для автодополнения дайте Glyph доступ в
+   разделе Конфиденциальность и безопасность → Универсальный доступ.
 
-### Возможности
-
-| Раздел | Что есть |
-|---|---|
-| Строка меню | Иконка Glyph, по выбору температура CPU или живые CPU/RAM в две строки. Если места нет, Glyph возвращается к иконке; повторный запуск из Finder или Spotlight открывает окно |
-| Ресурсы | Сводка состояния, CPU с графиком и температурой, температуры датчиков, память (примерно занятая), диск, сеть, батарея |
-| Буфер обмена | До 10 последних элементов в памяти: текст, ссылки, файлы, изображения до 30 МБ |
-| Автодополнение | Подсказка слова в поле ввода любого приложения: Tab — принять, Esc — скрыть |
-| Текст с экрана | Выделите область экрана (`Ctrl+Opt+T`), и её текст попадёт в буфер обмена. Распознавание на устройстве, нужно разрешение «Запись экрана». Картинки из истории буфера распознаются кнопкой в строке, без этого разрешения |
-| Транскрибация | Голосовой ввод в любое поле (`Ctrl+Opt+D`): нажать, сказать, нажать ещё раз. Речь распознаёт Whisper прямо на Mac и сам расставляет знаки препинания. Нужен модуль расширения (575 МБ): он скачивается один раз по кнопке во вкладке «Утилиты» и удаляется там же. Нужно разрешение на микрофон |
-| Обучение | По желанию: Glyph учится на вашем тексте и на выбранных файлах; можно забыть последние 7 или 30 дней или всё |
-| Виджет | Виджет ресурсов для рабочего стола и Центра уведомлений |
-| Настройки | Язык RU/EN, тема, режим строки меню, история буфера, глобальные сочетания, запуск при входе |
-
-### Автодополнение
-
-- Работает локально, без сети: словарь частот слов и сочетаний. Встроенные списки слов для
-  русского и английского дают подсказки с первого запуска.
-- Умные подсказки (по желанию, Mac с процессором Apple): небольшая языковая модель
-  Qwen3-0.6B подсказывает слова, которых ещё нет в словаре. Нужен модуль (347 МБ): он
-  скачивается один раз во вкладке «Утилиты» и удаляется там же. Ваш словарь главнее.
-- Включается в настройках («Дополнять текст в других приложениях») и сочетанием
-  `Ctrl+Opt+Space`; нужно разрешение «Универсальный доступ».
-- Подсказка рисуется серым текстом у курсора или, если поле не отдаёт положение курсора,
-  в небольшой панели рядом с полем.
+Дальше Glyph раз в день сам проверяет обновления.
 
 ### Приватность
 
-- История буфера хранится только в памяти, её можно отключить. Пароли из менеджеров
-  паролей не попадают в историю. Содержимое буфера не пишется на диск и в логи.
-- Обучение выключено по умолчанию. Glyph хранит только счётчики слов и сочетаний, а не
-  текст, в зашифрованном файле на вашем Mac.
-- Никогда не учится на полях паролей, приложениях из списка «Никогда не учиться» (менеджеры
-  паролей по умолчанию) и токенах, похожих на ключи и номера карт.
-- Голос, текст и данные никуда не отправляются. Интернет нужен только для загрузки
-  модулей транскрибации и умных подсказок, а также для проверки обновлений раз в день.
-  Запись голоса при диктовке держится только в оперативной памяти и не пишется на диск.
+- В сеть Glyph выходит только за обновлениями и за модулями, которые вы скачиваете сами.
+- История буфера не пишется на диск и в логи. Пароли из менеджеров паролей в неё не
+  попадают.
+- Обучение выключено по умолчанию. Если его включить, Glyph хранит счётчики слов, а не
+  текст, в зашифрованном файле. На полях паролей и в приложениях из списка исключений он
+  не учится. Выученное можно забыть за последние 7 или 30 дней или целиком.
+- Запись голоса при диктовке держится только в оперативной памяти и не пишется на диск.
 
 ### Сочетания клавиш
 
 | Сочетание | Действие |
 |---|---|
-| Клик / правый клик по иконке | Панель / меню: разделы, «О программе Glyph», выход |
-| `Cmd+1`, `Cmd+2`, `Cmd+3`, `Cmd+,` | Ресурсы, буфер, утилиты, настройки |
-| `Ctrl+Opt+G` | Открыть/закрыть панель на последней вкладке |
-| `Ctrl+Opt+V` | Буфер обмена из любого приложения |
-| `Ctrl+Opt+Space` | Включить/выключить автодополнение |
+| `Ctrl+Opt+G` | Открыть или закрыть Glyph |
+| `Ctrl+Opt+V` | Буфер обмена |
+| `Ctrl+Opt+Space` | Включить или выключить автодополнение |
+| `Tab`, `Esc` | Принять или скрыть подсказку |
+| `Ctrl+Opt+D` | Голосовой ввод |
 | `Ctrl+Opt+T` | Текст с экрана |
-| `Ctrl+Opt+D` | Голосовой ввод (когда установлен модуль транскрибации) |
-| `Tab`, `Esc` | Принять/скрыть подсказку |
+| `Cmd+1`, `Cmd+2`, `Cmd+3`, `Cmd+,` | Ресурсы, буфер, утилиты, настройки |
 
-### Обновления
+### Как устроен
 
-Glyph раз в день проверяет, есть ли новая версия, и предлагает её установить. Обновление
-ставится, только если его подпись совпадает с ключом, встроенным в приложение, и новая
-сборка подписана тем же сертификатом.
-
-Glyph использует whisper.cpp и MLX Swift (лицензия MIT); полный список — в окне
-«О программе Glyph» → «Лицензии».
+- Swift, AppKit и SwiftUI, виджет на WidgetKit.
+- Показатели читаются через Mach, IOKit и sysctl, температуры из SMC.
+- Автодополнение видит поле ввода через Accessibility. Подсказки строятся по частотному
+  словарю слов и сочетаний, умные подсказки дополняет Qwen3-0.6B на MLX.
+- Речь распознаёт whisper.cpp на GPU (Metal), текст с экрана читает Apple Vision.
+- Обновления подписаны ключом Ed25519. Glyph ставит обновление, только если подпись
+  верна и новая сборка подписана тем же сертификатом.
+- Сторонний код: whisper.cpp и MLX Swift под лицензией MIT. Полный список в «О программе
+  Glyph» → «Лицензии».
 
 ---
 
 ## English
 
-**Glyph** is a lightweight macOS menu-bar utility: Mac resources, clipboard history, local
-text autocomplete in other apps, voice input, and a system widget.
+Glyph is a small macOS menu-bar utility. It shows how busy your Mac is, remembers what
+you copied recently, suggests words as you type and turns speech into text. It all runs
+on the Mac: your text and voice are never sent anywhere.
 
-### Download
+<p align="center">
+  <img src="screenshots/en/resources.png" width="260" align="top" alt="Resources">
+  <img src="screenshots/en/settings.png" width="260" align="top" alt="Settings">
+  <img src="screenshots/en/tools-transcription.png" width="260" align="top" alt="Tools: transcription">
+</p>
 
-The latest version is on the [Releases](https://github.com/GV-Echo/Glyph-releases/releases/latest)
-page, file `Glyph-<version>.dmg`. Requires macOS 14 Sonoma or newer.
+### What it does
 
-The `.aar` file next to it is for automatic updates; you don't need to download it.
+#### Resources
+
+CPU, GPU, memory, disk, network, battery and sensor temperatures. The menu bar can show
+the icon, the CPU temperature or CPU and RAM load.
+
+#### Clipboard
+
+The last 10 things you copied: text, links, files, images up to 30 MB. The history lives
+in memory only and opens from any app with `Ctrl+Opt+V`.
+
+<p align="center">
+  <img src="screenshots/en/clipboard.png" width="360" alt="Clipboard">
+</p>
+
+#### Autocomplete
+
+Glyph finishes the word in grey right in the text field of any app, and `Tab` inserts it.
+Russian and English vocabularies work from the first launch and adapt to your writing
+over time. On Apple silicon you can turn on smart suggestions from a small language
+model (a 347 MB module).
+
+<p align="center">
+  <img src="screenshots/en/suggestion.png" width="420" alt="Suggestion in text">
+</p>
+<p align="center">
+  <img src="screenshots/en/tools-autocomplete.png" width="260" alt="Tools: text completion">
+</p>
+
+#### Voice input
+
+Press `Ctrl+Opt+D`, speak, press it again, and the text appears in the field with
+punctuation. Audio files can be turned into .txt too. This needs the speech recognition
+module (575 MB), downloaded once from the Tools tab.
+
+<p align="center">
+  <img src="screenshots/en/voice-input.png" width="380" alt="Voice input">
+</p>
+
+#### Text from screen
+
+`Ctrl+Opt+T`, select an area, and its text lands on the clipboard.
+
+#### Widget
+
+CPU, memory, network and battery on the desktop or in Notification Center.
+
+<p align="center">
+  <img src="screenshots/en/widget.png" width="330" alt="Widget">
+</p>
 
 ### Install
 
-1. Open the dmg and drag Glyph into Applications.
-2. Glyph is not notarized by Apple, so macOS blocks it after download. Allow it to run
-   with one Terminal command:
+Requires macOS 14 Sonoma or newer.
+
+1. Download `Glyph-<version>.dmg` from
+   [Releases](https://github.com/GV-Echo/Glyph-releases/releases/latest), open it and drag
+   Glyph into Applications.
+2. Glyph is not notarized by Apple, so macOS blocks the first launch. Allow it in Terminal:
 
    ```bash
    xattr -dr com.apple.quarantine /Applications/Glyph.app && open /Applications/Glyph.app
    ```
 
-   Or: System Settings → Privacy & Security → "Open Anyway".
-3. Glyph lives in the menu bar and has no Dock icon.
-4. Autocomplete needs access: System Settings → Privacy & Security → Accessibility.
+   Or use System Settings → Privacy & Security → "Open Anyway".
+3. The icon appears in the menu bar; there is no Dock icon. For autocomplete, allow Glyph
+   in Privacy & Security → Accessibility.
 
-### Features
-
-| Area | Details |
-|---|---|
-| Menu bar | Glyph icon, optionally CPU temperature or live CPU/RAM on two lines. Without room Glyph falls back to the icon; opening it again from Finder or Spotlight shows the popover |
-| Resources | Health summary, CPU with trend and temperature, sensor temperatures, memory (approximate used), disk, network, battery |
-| Clipboard | Up to 10 recent items in memory: text, links, files, images up to 30 MB |
-| Autocomplete | Word suggestions in any app's text field: Tab accepts, Esc dismisses |
-| Text from screen | Select a screen area (`Ctrl+Opt+T`) and its text goes to the clipboard. Recognised on device; needs the Screen Recording permission. Images in clipboard history are recognised from their row, without that permission |
-| Transcription | Voice input into any field (`Ctrl+Opt+D`): press, speak, press again. Whisper recognises speech right on the Mac and adds the punctuation itself. Needs an extension module (575 MB), downloaded once from the Tools tab and deleted there too. Needs microphone access |
-| Learning | Opt-in: Glyph learns from your writing and from files you choose; forget the last 7 or 30 days, or everything |
-| Widget | Resources widget for the desktop and Notification Center |
-| Settings | RU/EN language, appearance, menu-bar mode, clipboard history, global shortcuts, open at login |
-
-### Autocomplete
-
-- Local, no network: frequency tables of words and word sequences. Bundled Russian and
-  English word lists give suggestions from the first launch.
-- Smart suggestions (optional, Apple silicon): a small language model, Qwen3-0.6B,
-  suggests words your vocabulary doesn't know yet. Needs a module (347 MB), downloaded
-  once from the Tools tab and deleted there too. Your vocabulary comes first.
-- Turned on in Settings ("Complete text in other apps") and with `Ctrl+Opt+Space`; needs
-  Accessibility access.
-- The suggestion is drawn as grey text at the caret, or in a small panel beside the field
-  when the field does not report its caret position.
+After that Glyph checks for updates once a day.
 
 ### Privacy
 
-- Clipboard history lives in memory only and can be disabled. Secrets from password
-  managers are not recorded. Clipboard contents never reach the disk or the logs.
-- Learning is off by default. Glyph stores counts of words and word sequences, not text,
-  in an encrypted file on your Mac.
-- Never learns from password fields, apps on the "Never learn from" list (password
-  managers by default), or tokens that look like keys or card numbers.
-- Voice, text and data are never sent anywhere. The internet is used only to download
-  the transcription and smart suggestions modules, and to check for updates once a day.
-  Dictated voice stays in RAM only and never reaches the disk.
+- Glyph goes online only for updates and for modules you download yourself.
+- Clipboard history never reaches the disk or the logs. Passwords from password managers
+  are not recorded.
+- Learning is off by default. When it is on, Glyph keeps word counts, not your text, in an
+  encrypted file. It never learns from password fields or from apps on the exclusion list.
+  You can forget the last 7 or 30 days, or everything.
+- Dictated voice stays in RAM only and never reaches the disk.
 
 ### Shortcuts
 
 | Shortcut | Action |
 |---|---|
-| Click / right-click the icon | Popover / menu: sections, About Glyph, Quit |
-| `Cmd+1`, `Cmd+2`, `Cmd+3`, `Cmd+,` | Resources, Clipboard, Tools, Settings |
-| `Ctrl+Opt+G` | Open/close the panel on its last tab |
-| `Ctrl+Opt+V` | Clipboard from any app |
-| `Ctrl+Opt+Space` | Toggle autocomplete |
+| `Ctrl+Opt+G` | Open or close Glyph |
+| `Ctrl+Opt+V` | Clipboard |
+| `Ctrl+Opt+Space` | Turn autocomplete on or off |
+| `Tab`, `Esc` | Accept or dismiss a suggestion |
+| `Ctrl+Opt+D` | Voice input |
 | `Ctrl+Opt+T` | Text from screen |
-| `Ctrl+Opt+D` | Voice input (with the transcription module installed) |
-| `Tab`, `Esc` | Accept / dismiss a suggestion |
+| `Cmd+1`, `Cmd+2`, `Cmd+3`, `Cmd+,` | Resources, Clipboard, Tools, Settings |
 
-### Updates
+### How it works
 
-Once a day Glyph checks for a new version and offers to install it. An update installs
-only if its signature matches the key built into the app and the new build is signed with
-the same certificate.
-
-Glyph uses whisper.cpp and MLX Swift (MIT licence); the full list is in About Glyph →
-Licences.
+- Swift, AppKit and SwiftUI, with a WidgetKit widget.
+- Metrics come from Mach, IOKit and sysctl, temperatures from the SMC.
+- Autocomplete reads the text field through Accessibility. Suggestions come from a
+  frequency table of words and word sequences; smart suggestions add Qwen3-0.6B on MLX.
+- whisper.cpp recognises speech on the GPU (Metal), Apple Vision reads text from the screen.
+- Updates are signed with an Ed25519 key. Glyph installs one only if the signature checks
+  out and the new build is signed with the same certificate.
+- Third-party code: whisper.cpp and MLX Swift, MIT licence. The full list is in About
+  Glyph → Licences.
